@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Male - Boost - Dosage Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body> 
+ 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">×</span>
+
+      <div id="testosteroneDoseBlock" style="background-color: #fff;">
+        <h5>Testosterone Boost: <span id="testosteroneBoost">-</span></h5>
+      </div>
+
+      <div class="appendmsg" id="appendcontent"></div>
+      <div id="dialogueContainer"></div>
+      
+    </div>
+  </div>
+ 
+
+  <form action="/submit" method="post" id="form">
+    <fieldset>
+      <legend>Patient Information</legend>
+      <label for="patientName">Patient ID:</label>
+      <input type="text" id="patientID" name="patientID" required><br><br>
+    
+      <label for="patientAge">Patient Age:</label>
+      <input type="number" id="patientAge" name="patientAge" required><br><br>
+    
+      <label for="patientWeight">Patient Weight (lbs):</label>
+      <input type="number" id="patientWeight" name="patientWeight"><br><br>
+
+    </fieldset>
+    <br><br>
+    <fieldset>
+      <legend>Last Procedure Information</legend>
+      <label for="lastProcedureDate">Last Procedure Date (mm/dd/yyyy):</label>
+      <input type="date" id="lastProcedureDate" name="lastProcedureDate" required><br><br>
+    
+    </fieldset>
+    <br><br>
+
+
+    <fieldset>
+      <legend>TESTOSTERONE</legend>
+      <label for="testosteroneLabs">Testosterone Labs (at 5 weeks):</label>
+      <input type="number" id="testosteroneLabs" name="testosteroneLabs" step="0.01" required><br><br>
+
+      <label for="symptomaticTestosterone">Symptomatic?:</label>
+      <input type="checkbox" id="symptomaticTestosterone" name="symptomaticTestosterone"><br>
+      <span class="guiding-text">(fatigue, lack of energy, mood swings/depression, anxiety, foggy memory, etc)      </span>
+      <br><br>
+    </fieldset>
+
+    <input type="submit" value="Calculate" id ="calculate">
+  </form>
+</body>
+</html>
