@@ -118,3 +118,10 @@ input[type="submit"]:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+.text-center{
+  text-align: center;
+}
+.text-bold{
+  font-weight: bold;
+}
